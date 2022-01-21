@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+body{
+    overflow: hidden;
+    animation: shakebody linear 6s infinite;
+}
 
 .sky {
     background-image: url(background.jpg);
@@ -27,6 +31,7 @@
     background-repeat: repeat-x;
     position: absolute;
     top: 90vh;
+    animation: carMove linear 13s infinite;
 }
 
 .car {
@@ -38,6 +43,7 @@
     position: absolute;
     top: 60vh;
     left: 25%;
+    animation: shake linear .3s infinite;
 }
 
 .wheel1 img {
@@ -62,3 +68,35 @@
         transform: rotate(360deg);
     }
 }
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes shakebody
+{
+    0%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
